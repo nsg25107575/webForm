@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Список контактів</h1>
+
+        <div class="form-container">
+            <input type="text" id="contactName" placeholder="Назва" required>
+            <input type="text" id="contactPhone" placeholder="Телефон" required>
+            <input type="email" id="contactEmail" placeholder="Email" required>
+            <textarea id="contactDescription" placeholder="Опис" required></textarea>
+            <button onclick="addContact()">Додати контакт</button>
+        </div>
+
+        <div class="search-container">
+            <input type="text" id="searchQuery" placeholder="Пошук..." onkeyup="searchContacts()">
+            <button onclick="clearSearch()">Очистити пошук</button>
+        </div>
+
+        <div class="sort-container">
+            <button onclick="sortContacts('asc')">Сортувати за алфавітом ↑</button>
+            <button onclick="sortContacts('desc')">Сортувати за алфавітом ↓</button>
+        </div>
+
+        <div id="contactList" class="contact-list"></div>
+
+        <div class="pagination" id="pagination"></div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
